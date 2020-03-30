@@ -2,7 +2,7 @@ class CLI
 # this CLI (Command Line Interface) class contains the user input/output methods
 # TODO: give the user the option of searching for categories within fiction
 
-require_relative './repeat_repeat.rb' # require_relative './class_methods_module.rb'
+require_relative './repeat_repeat.rb' # require_relative
 extend RepeatRepeat
 
   def self.list_books # this class method iterates through the book instances held in the @@all array in the books.rb file
