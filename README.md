@@ -1,9 +1,23 @@
 # Booku
-    # App description - delete
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/booku`. To experiment with that code, run `bin/console` for an interactive prompt.
+    Program description:
+    This program retrieves a small selection of ten books from the google books 
+    API. It presents the books in a list (on the bookshelf) to the user with an 
+    index and requests that the user choose a book by typing a number 1-10 followed 
+    by ENTER to see more details about one of the books on the shelf. If the user 
+    makes a selection outside of that 1-10 range, the program informs the user that
+    the user has made an invalid selection. The program provides the user with a 
+    option to exit the program or choose a book from the shelf. Once presented with
+    the bookshelf and the user chooses a number 1-10, the program presents the book
+    with a few more details about that particular publication (not always the original)
+    of the book selected. Below the details of the book selected, the program again
+    offers the user to exit the program or choose another book. In this portion of 
+    the program, if the user selects a number between 4-10, the user will be informed
+    that they have discovered the secret passageway behind the bookshelf! The user
+    will be told not to tell anyone and to go back to looking at books. This message
+    is followed by the invalid selection message and provides the user with the option
+    to exit or select a book from the bookshelf. 
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -44,7 +58,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/booku.
 
-## Licensing statement
-#	MIT open source public license often used
-#
-#
+## License 
+
+The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

@@ -22,10 +22,14 @@ extend RepeatRepeat
     puts " "
     puts "Please select a book by typing the corresponding number followed by ENTER.".colorize(:color => :light_yellow)
     puts "~~~~~     ~~~~~     ~~~~~    ~~~~~     ~~~~~     ~~~~~    ~~~~~     ~~~~~     ~~~~~    ~~~~~".colorize(:color => :green) #, :background => :green) # line for spacing aesthetics
+    
     input = gets.chomp.to_i - 1 # user input is requested and the user input is turned into an integer for indexing purposes
-    book = Books.all[input] # the variable book is becoming the instance which was selected by the user
-    @@book = book
-    self.get_book_details(self.book) # pulls the details for the book the user selects
+    if input < 0 || input > 9 # user input is outside of the range of the index of my bookshelf, it tells the user they made the wrong selection
+      self.wrong_selection
+    end
+      book = Books.all[input] # the variable book is becoming the instance which was selected by the user
+      @@book = book
+      self.get_book_details(self.book) # pulls the details for the book the user selects 
   end
     
   def self.book
@@ -48,7 +52,7 @@ extend RepeatRepeat
     curtains(2, 1)
       puts "Please type 11 followed by ENTER if you would like to exit the booku program." # give the user the option of exiting the program
       puts " "
-      puts "Otherwise, you may type 2 followed by ENTER to choose another book from the shelf." # give the user an option to choose another book
+      puts "Otherwise, you may type 2 followed by ENTER to choose a book from the shelf." # give the user an option to choose another book
     input = gets.chomp.to_i
     if input == 11
       self.leave_bookshelf
@@ -77,7 +81,7 @@ extend RepeatRepeat
     curtains(4, 0.5)
     puts "Oh dear! You found the secret passageway behind the bookshelf!".colorize(:color => :red).bold
     curtains(6, 0.5)
-    puts "You better not tell anyoone! Now go back to looking at books!".colorize(:color => :red).bold
+    puts "You better not tell anyone! Now go back to looking at books!".colorize(:color => :red).bold
     curtains(4, 0.5)
   end
 

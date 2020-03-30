@@ -15,7 +15,7 @@ class API
   def self.scrub_html(string)   #remove html tags from a string
     tags = ['<br>','</br>','<b>','</b>','<p>','</p>','<i>','</i>']  #list of tags to scrub
     tags.each do |tag|
-      string = string.gsub(tag, "")
+      string = string.gsub(tag, "")  #TODO add space if removed something after a period, and delete "..." from description
     end
     return string
   end
