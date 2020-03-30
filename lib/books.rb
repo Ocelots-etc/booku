@@ -1,6 +1,6 @@
 class Books
 
-  attr_accessor :title, :author, :categories, :date_pub, :description, :id  # TODO - be sure about this - class instance variables initialized
+  attr_accessor :title, :author, :categories, :date_pub, :description, :id  
   # through a reader and a writer by using attr_accessor to make the variables available outside of the class
 
   @@all = []  # the class variable array
