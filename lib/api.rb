@@ -39,7 +39,7 @@ class API
         n += (nn + 1)                       # iterates through the long string which is the description
       end
       return strary                         # returns array of string elements which are substrings of the input string which makes up the description 
-    end
+  end
 end
 # this method variable, bookshelf, holds 10 books we will pull from the API TODO: pull 10 books from API
 # bookshelf.each_with_index iterates through the books and assigns them an index (0-9)

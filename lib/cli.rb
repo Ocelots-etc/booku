@@ -6,9 +6,9 @@ require_relative './repeat_repeat.rb' # require_relative
 extend RepeatRepeat
 
   def self.list_books # this class method iterates through the book instances held in the @@all array in the books.rb file
-    puts "~~~~~     ~~~~~     ~~~~~    ~~~~~     ~~~~~     ~~~~~    ~~~~~     ~~~~~     ~~~~~    ~~~~~".colorize(:color => :black, :background => :light_white)  # line for spacing aesthetics
-    puts "                                  Welcome to my bookshelf!                                  ".colorize(:color => :yellow, :background => :light_cyan).bold  # Welcomes the user to the bookshelf they are viewing
-    puts "~~~~~     ~~~~~     ~~~~~    ~~~~~     ~~~~~     ~~~~~    ~~~~~     ~~~~~     ~~~~~    ~~~~~".colorize(:color => :black, :background => :light_white)  # line for spacing aesthetics
+    puts "~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~".colorize(:color => :black, :background => :light_white)  # line for spacing aesthetics
+    puts "                                  Welcome to my bookshelf!                                     ".colorize(:color => :yellow, :background => :light_cyan).bold  # Welcomes the user to the bookshelf they are viewing
+    puts "~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~     ~~~~~".colorize(:color => :black, :background => :light_white)  # line for spacing aesthetics
     Books.all.each_with_index do |book, n| # and outputs an indexed list of my bookshelf book titles
       puts "#{n + 1}. #{book.title}"
     end
@@ -52,15 +52,15 @@ extend RepeatRepeat
     curtains(2, 1)
       puts "Please type 11 followed by ENTER if you would like to exit the booku program." # give the user the option of exiting the program
       puts " "
-      puts "Otherwise, you may type 2 followed by ENTER to choose a book from the shelf." # give the user an option to choose another book
+      puts "Otherwise, you may type 12 followed by ENTER to choose a book from the shelf." # give the user an option to choose another book
     input = gets.chomp.to_i
     if input == 11
       self.leave_bookshelf
     end
-    if input == 2  
+    if input == 12  
       self.list_books 
     end  # lists the books on my bookshelf for user selection using Command Line Interface
-    if input.between?(4, 10)  
+    if input.between?(1, 10)  
       self.mystery 
       self.wrong_selection
     end
@@ -79,9 +79,9 @@ extend RepeatRepeat
   def self.mystery
     # should be triggered by pressing 4-10 when prompted to input 2 or 11 for exit or choose again
     curtains(4, 0.5)
-    puts "Oh dear! You found the secret passageway behind the bookshelf!".colorize(:color => :red).bold
+    puts "        Oh dear! You found the secret passageway behind the bookshelf!".colorize(:color => :red).bold
     curtains(6, 0.5)
-    puts "You better not tell anyone! Now go back to looking at books!".colorize(:color => :red).bold
+    puts "         You better not tell anyone! Now go back to looking at books!".colorize(:color => :red).bold
     curtains(4, 0.5)
   end
 
@@ -89,7 +89,7 @@ extend RepeatRepeat
     # if input = 11..# anything not 2 or 3 - and above 10 and symbols and letters etc
       curtains(2, 0.75)
       puts " "
-      puts "Oops, you made an invalid selection.".colorize(:color => :magenta)
+      puts "                      Oops, you made an invalid selection.".colorize(:color => :magenta)
       puts " "
       self.user_options
   end

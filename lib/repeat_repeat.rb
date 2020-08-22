@@ -7,7 +7,7 @@ module RepeatRepeat
           puts "      o          o          o          o          o          o          o        ".colorize(:color => :blue)
           puts "   o     o    o     o    o     o    o     o    o     o    o     o    o     o     ".colorize(:color => :blue)
           puts "o          o          o          o          o          o          o          o   ".colorize(:color => :blue)
-           n -= 1
+          n -= 1
           sleep(a)
         end
     end
