@@ -62,7 +62,7 @@ extend RepeatRepeat
     end  # lists the books on my bookshelf for user selection using Command Line Interface
     if input.between?(1, 10)  
       self.mystery 
-      self.wrong_selection
+      self.user_options
     end
       self.wrong_selection
   end
